@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
@@ -16,46 +15,29 @@ export default function Home() {
       </Head>
       <main className="">
         <div className='bg-blue-700 text-center'>
-          <h1 className='text-3xl py-3'>ALEMOL AMG PRESENTA:</h1>
+          <h1 className='text-3xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        {/* <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div> */}
 
         {/* Tarjetas para el cumpleaños */}
-        <div className='py-3 grid grid-cols-2 content-center'>
-          <div className='bg-slate-500 px-2 mx-2 '>
-            <Card
-              titulo="Fiesta Málaga 18 de Marzo"
-              description="El cumpleaños se celebra en Málaga durante el día 18"
-            ></Card>
-          </div>
-          <div className='bg-emerald-400 basis-auto px-2 mx-2'>
-            <Card
-              titulo="Fiesta Lucena 25 de Marzo"
-              description="El cumpleaños se celebra en Málaga durante el día 18"
-            ></Card>
+        <div className='py-3 grid md:grid-cols-2 content-evenly'>
+          <Card
+            titulo="Fiesta Málaga 18 de Marzo"
+            description="El cumpleaños se celebra en Málaga durante el día 18"
+            className="bg-slate-500"
+          ></Card>
+          <Card
+            titulo="Fiesta Lucena 25 de Marzo"
+            description="El cumpleaños se celebra en Málaga durante el día 18"
+            className='bg-red-500'
+          ></Card>
+        </div>
+
+        {/* Formulario */}
+        <div className='flex flex-full bg-stone-400'>
+          <h2>Formulario de Registro</h2>
+          <div>
+            <p className=''>proximamente...</p>
           </div>
         </div>
 
