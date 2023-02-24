@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Card from '@/src/components/card'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className="bg-red-900">
+        <div className='bg-blue-700 text-center'>
+          <h1>ALEMOL AMG PRESENTA:</h1>
+        </div>
+
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -39,7 +44,10 @@ export default function Home() {
           </div>
         </div>
 
-        
+        <div>
+          <Card titulo="HOLA MUNDO"></Card>
+        </div>
+
 
         {/* <div className={styles.center}>
           <Image
