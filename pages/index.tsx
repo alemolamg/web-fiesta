@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import tarjeta from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,26 +19,31 @@ export default function Home() {
           <h1 className='text-3xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
+        <div className='mx-3 my-2'>
+          Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
+          La idea es poder compartir con vosotros, mis amigos; este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
+          Para más detalles podeis contactar por info@alemolamg.com y por telegram con: @AlemolAMG
+        </div>
 
         {/* Tarjetas para el cumpleaños */}
-        <div className='py-3 grid md:grid-cols-2 content-evenly'>
+        <div className='py-3 my-2 grid md:grid-cols-2 content-evenly'>
           <Card
             titulo="Fiesta Málaga 18 de Marzo"
-            description="El cumpleaños se celebra en Málaga durante el día 18"
-            className="bg-slate-500"
+            description="El cumpleaños se celebra en Málaga durante el día 18. El plan"
+            className={`${tarjeta.tarjeta} border-2 border-green-400`} //TODO: cambiar clase 'card' por clase 'tarjeta'
           ></Card>
           <Card
             titulo="Fiesta Lucena 25 de Marzo"
             description="El cumpleaños se celebra en Málaga durante el día 18"
-            className='bg-red-500'
+            className='border-2 border-red-400'
           ></Card>
         </div>
 
         {/* Formulario */}
-        <div className='flex flex-full bg-stone-400'>
-          <h2>Formulario de Registro</h2>
+        <div className=' bg-stone-400'>
+          <h2 className='text-xl'>Formulario de Registro</h2>
           <div>
-            <p className=''>proximamente...</p>
+            <p className=''>Proximamente...</p>
           </div>
         </div>
 
