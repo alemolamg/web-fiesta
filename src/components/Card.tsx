@@ -1,11 +1,11 @@
 import { FC } from "react"
 
-const Card: FC<{titulo: string}> = ({titulo}) => {
+const Card: FC<{titulo: string, description: string}> = ({titulo,description}) => {
     return (
         <>
             <h1>{titulo}</h1>
             <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique rem harum perferendis laborum excepturi consequatur impedit, libero velit, sint, quod magni adipisci consectetur! Harum ratione sapiente consectetur consequuntur, quisquam excepturi.
+                {description}
             </div>
 
         </>
