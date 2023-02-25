@@ -39,12 +39,12 @@ export default function Home() {
         </div>
 
         {/* Formulario */}
-        <div className=' bg-stone-400'>
+        {/* <div className=' bg-stone-400'>
           <h2 className='text-xl'>Formulario de Registro</h2>
           <div>
             <p className=''>Proximamente...</p>
           </div>
-        </div>
+        </div> */}
 
 
         {/* <div className={styles.center}>
