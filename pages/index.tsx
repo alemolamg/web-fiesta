@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
+import Form from '@/src/components/Form'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,12 +29,13 @@ export default function Home() {
         <div className='py-3 my-2 grid md:grid-cols-2 content-evenly'>
           <Card
             titulo="Fiesta Málaga 18 de Marzo"
-            description="El cumpleaños se celebra en Málaga durante el día 18. El plan"
-            className={`${styles.tarjetaMalaga}`} //TODO: cambiar clase 'card' por clase 'tarjeta'
+            description="El cumpleaños se celebra en Málaga durante el día 18."
+            className={`${styles.tarjetaMalaga}`}
           ></Card>
           <Card
             titulo="Fiesta Lucena 25 de Marzo"
-            description="El cumpleaños se celebra en Málaga durante el día 18"
+            description="Preparate para la fiesta el día 25 de marzo. Abrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
+            Se va a poner una barra libre durante 2 horas."
             className={`${styles.tarjetaLucena}`}
           ></Card>
         </div>
@@ -45,6 +47,10 @@ export default function Home() {
             <p className=''>Proximamente...</p>
           </div>
         </div> */}
+
+        <div>
+          <Form></Form>
+        </div>
 
 
         {/* <div className={styles.center}>

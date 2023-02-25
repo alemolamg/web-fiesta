@@ -5,9 +5,8 @@ const Card: FC<{ titulo: string, description: string, className: string }> = ({ 
     return (
         <div className={classStyle}>
             <h1 className="text-xl text-center">{titulo}</h1>
-            <div>
+            <div className="text-justify">
                 {description}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem maiores, id pariatur laudantium repellat! Nemo cum dolor illum iste sint exercitationem, adipisci ipsam illo? Eveniet architecto expedita dolores debitis?
             </div>
 
         </div>
