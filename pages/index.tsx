@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import tarjeta from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="">
-        <div className='bg-blue-700 text-center'>
+        <div className='bg-blue-600 text-center'>
           <h1 className='text-3xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
@@ -30,12 +29,12 @@ export default function Home() {
           <Card
             titulo="Fiesta Málaga 18 de Marzo"
             description="El cumpleaños se celebra en Málaga durante el día 18. El plan"
-            className={`${tarjeta.tarjeta} border-2 border-green-400`} //TODO: cambiar clase 'card' por clase 'tarjeta'
+            className={`${styles.tarjetaMalaga}`} //TODO: cambiar clase 'card' por clase 'tarjeta'
           ></Card>
           <Card
             titulo="Fiesta Lucena 25 de Marzo"
             description="El cumpleaños se celebra en Málaga durante el día 18"
-            className='border-2 border-red-400'
+            className={`${styles.tarjetaLucena}`}
           ></Card>
         </div>
 

@@ -1,11 +1,61 @@
-/* .tarjeta{
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  background-color: rgb(66, 2, 15);
-} */
+.tarjetaMalaga {
+  background-color: var(--tarjeta-malaga-bg);
+  /* border-radius: 0.7rem; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  border-top: 0.3rem solid #607bb1;
+  border-bottom: 0.3rem solid #607bb1;
+  border-left: 0.2rem solid #607bb1;
+  border-right: 0.2rem solid #607bb1;
+}
 
+.tarjetaLucena{
+  background-color: var(--tarjeta-lucena-bg);
+  /* border-radius: 0.7rem; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  border-top: 0.3rem solid #88a661;
+  border-bottom: 0.3rem solid #79a83a;
+  border-left: 0.2rem solid #79a83a;
+  border-right: 0.2rem solid #79a83a;
+}
+
+.tarjeta-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: blur(5px); /* Añade el efecto blur */
+}
+
+.tarjeta-content {
+  padding: 20px;
+}
+
+.tarjeta-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-btn:hover {
+  background-color: #3e8e41;
+}
 
 /** CREADOS POR NEXT.JS */
 .main {
