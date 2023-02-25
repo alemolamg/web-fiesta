@@ -1,0 +1,43 @@
+.tarjeta {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .tarjeta-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: blur(5px); /* Añade el efecto blur */
+  }
+  
+  .tarjeta-content {
+    padding: 20px;
+  }
+  
+  .tarjeta-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .tarjeta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tarjeta-btn:hover {
+    background-color: #3e8e41;
+  }
+  
