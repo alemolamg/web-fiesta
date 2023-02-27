@@ -8,7 +8,6 @@ const Card: FC<{ titulo: string, description: string, className: string }> = ({ 
             <div className="text-justify">
                 {description}
             </div>
-
         </div>
     )
 }
