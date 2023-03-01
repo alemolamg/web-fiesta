@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className='lg:mx-5'>
 
-        <div className='mx-3 my-2'>
+        <div className='mx-3 my-2 px-3 py-2 text-justify'>
           Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
           La idea es poder compartir con vosotros, mis amigos; este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
           Para más detalles podeis contactar por info@alemolamg.com y por telegram con: @AlemolAMG
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         {/* Tarjetas para el cumpleaños */}
-        <div className='py-3 my-2 grid md:grid-cols-2 content-evenly '>
+        <div className='py-3 my-2 grid sm:grid-cols-2 content-evenly '>
           <Card
             titulo="Fiesta Málaga 18 de Marzo"
             description="El cumpleaños se celebra en Málaga durante el día 18."
@@ -37,7 +37,7 @@ export default function Home() {
           ></Card>
           <Card
             titulo="Fiesta Lucena 25 de Marzo"
-            description="Preparate para la fiesta el día 25 de marzo. Abrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
+            description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
             Se va a poner una barra libre durante 2 horas."
             className={`${styles.tarjetaLucena}`}
           ></Card>
