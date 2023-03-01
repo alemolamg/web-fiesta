@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { ChangeEvent, FC } from "react"
 import React, { useState } from 'react';
 
 const Form: FC<{}> = ({ }) => {
@@ -11,9 +11,9 @@ const Form: FC<{}> = ({ }) => {
     const [localidad, setLocalidad] = useState('');
     const [asistencia, setAsistencia] = useState('');
 
-    // const handleNombreChange = (event) => {
-    //     setNombre(event.target.value);
-    //   };
+     const handleNombreChange = (event: ChangeEvent<HTMLInputElement>) => {
+         setNombre(event.target.value);
+       };
     
     //   const handleApellidosChange = (event) => {
     //     setApellidos(event.target.value);
@@ -65,8 +65,7 @@ const Form: FC<{}> = ({ }) => {
                             type="text"
                             id="nombre"
                             name="nombre"
-                            
-                            // onChange={handleNombreChange}
+                            onChange={handleNombreChange}
                             placeholder="Escribe tu nombre"
                             className="shadow appearance-none border rounded w-full py-2 px-3 mr-2 leading-tight focus:outline-none focus:shadow-outline"
                             // className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
