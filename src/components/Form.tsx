@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { ChangeEvent, FC } from "react"
 import React, { useState } from 'react';
 
 const Form: FC<{}> = ({ }) => {
@@ -29,10 +29,10 @@ const Form: FC<{}> = ({ }) => {
         console.log(localidades);
       };
 
-    // const handleNombreChange = (event) => {
-    //     setNombre(event.target.value);
-    //   };
-
+     const handleNombreChange = (event: ChangeEvent<HTMLInputElement>) => {
+         setNombre(event.target.value);
+       };
+    
     //   const handleApellidosChange = (event) => {
     //     setApellidos(event.target.value);
     //   };
