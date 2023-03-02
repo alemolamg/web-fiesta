@@ -34,23 +34,28 @@ const Form: FC<{}> = ({ }) => {
         setTelefono(event.target.value);
     };
 
-    // const handleAsistenciaChange = (event: ChangeEvent<HTMLInputElement>) => {
-    //     setAsistencia(event.target.value);
-    // };
 
-     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event ) => {
-         event.preventDefault();
-         console.log(`
+    const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+        event.preventDefault();
+        console.log(`
            Nombre: ${nombre}
            Apellidos: ${apellidos}
            Email: ${email}
            Teléfono: ${telefono}
            Localidad: ${localidad}
          `);
-         await supabase.from("personas").insert({
-             nombre, apellidos, email, telefono, lugar: localidad
-         })
-     };
+        await supabase.from("personas").insert({
+            nombre, apellidos, email, telefono, lugar: localidad
+        })
+
+        var formInfo = document.getElementById("formInfo") as HTMLDivElement;
+        formInfo.style.display = "block";
+
+        setTimeout(() => {
+            formInfo.style.display = "none";
+          }, 2000); // Ocultar el div después de 2 segundos
+
+    };
 
     return (
         <>
@@ -92,7 +97,7 @@ const Form: FC<{}> = ({ }) => {
                             />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2">
+                    <div className="grid md:grid-cols-2">
                         <div className="mb-4 md:mx-2">
                             <label htmlFor="email" className="block font-bold mb-2">
                                 Email:
@@ -125,7 +130,7 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-4 text-center">
                         <span className="block font-bold mb-2">
                             ¿En qué localidades estás interesado/a?
                         </span>
@@ -166,16 +171,17 @@ const Form: FC<{}> = ({ }) => {
                             <span className="ml-2 ">Ambas</span>
                         </label>
                     </div>
+                        <h2 id="formInfo" className="hidden my-3 py-2 text-green-600 uppercase text-2xl text-center">Formulario Enviado</h2>
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-yellow-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Enviar
                         </button>
                     </div>
-
                 </form>
+
             </div>
         </>
     )
