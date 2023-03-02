@@ -1,5 +1,6 @@
-import { ChangeEvent, FC } from "react"
+import { ChangeEvent, FC, FormEventHandler } from "react"
 import React, { useState } from 'react';
+import { supabase } from "@/supabaseClient";
 
 const Form: FC<{}> = ({ }) => {
     //const classStyle: string = "my-2 px-2 py-1 md:mx-4 md:rounded-xl lg:mx-5 " + className
@@ -9,19 +10,11 @@ const Form: FC<{}> = ({ }) => {
     const [email, setEmail] = useState('');
     const [telefono, setTelefono] = useState('');
     // const [localidad, setLocalidad] = useState('');
-    const [asistencia, setAsistencia] = useState('');
-    const [localidades, setLocalidades] = useState({
-        lucena: false,
-        malaga: false,
-        ambas: false
-    });
+    const [localidad, setLocalidad] = useState("");
 
-    const handleLocalidadesChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const { name, checked } = event.target;
-        setLocalidades({
-            ...localidades,
-            [name]: checked
-        });
+
+    const handleLocalidadChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setLocalidad(event.target.value);
     };
 
 
@@ -45,16 +38,18 @@ const Form: FC<{}> = ({ }) => {
     //     setAsistencia(event.target.value);
     // };
 
-     const handleSubmit = (event: ChangeEvent<HTMLInputElement>) => {
+     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event ) => {
          event.preventDefault();
          console.log(`
            Nombre: ${nombre}
            Apellidos: ${apellidos}
            Email: ${email}
            Teléfono: ${telefono}
-           Localidad: ${localidades}
-           Asistencia: ${asistencia}
+           Localidad: ${localidad}
          `);
+         await supabase.from("personas").insert({
+             nombre, apellidos, email, telefono, lugar: localidad
+         })
      };
 
     return (
@@ -64,7 +59,7 @@ const Form: FC<{}> = ({ }) => {
                 En proceso de creación
             </div> */}
             <div className=" p-4">
-                <form className="border-red-300 border-2 p-4 rounded-lg shadow-md">
+                <form className="border-red-300 border-2 p-4 rounded-lg shadow-md" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2">
                         <div className="mb-4 mx-2">
                             <label htmlFor="nombre" className="block font-bold mb-2">
@@ -136,33 +131,36 @@ const Form: FC<{}> = ({ }) => {
                         </span>
                         <label htmlFor="localidades-lucena" className="inline-flex items-center mr-4">
                             <input
-                                type="checkbox"
+                                type="radio"
                                 id="localidades-lucena"
-                                name="lucena"
-                                checked={localidades.lucena}
-                                onChange={handleLocalidadesChange}
+                                name="localidad"
+                                value={"lucena"}
+                                checked={localidad === "lucena"}
+                                onChange={handleLocalidadChange}
                                 className="form-checkbox h-4 w-4 text-blue-600"
                             />
                             <span className="ml-2">Lucena</span>
                         </label>
                         <label htmlFor="localidades-malaga" className="inline-flex items-center mr-4">
                             <input
-                                type="checkbox"
+                                type="radio"
                                 id="localidades-malaga"
-                                name="malaga"
-                                checked={localidades.malaga}
-                                onChange={handleLocalidadesChange}
+                                name="localidad"
+                                value={"malaga"}
+                                checked={localidad === "malaga"}
+                                onChange={handleLocalidadChange}
                                 className="form-checkbox h-4 w-4 text-blue-600"
                             />
                             <span className="ml-2">Málaga</span>
                         </label>
-                        <label htmlFor="localidades-ambas" className="inline-flex items-center">
+                        <label htmlFor="localidad" className="inline-flex items-center">
                             <input
-                                type="checkbox"
+                                type="radio"
                                 id="localidades-ambas"
-                                name="ambas"
-                                checked={localidades.ambas}
-                                onChange={handleLocalidadesChange}
+                                name="localidad"
+                                value={"ambas"}
+                                checked={localidad === "ambas"}
+                                onChange={handleLocalidadChange}
                                 className="form-checkbox h-4 w-4 text-blue-600"
                             />
                             <span className="ml-2 ">Ambas</span>
@@ -171,7 +169,7 @@ const Form: FC<{}> = ({ }) => {
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Enviar
                         </button>
