@@ -169,7 +169,7 @@ const Form: FC<{}> = ({ }) => {
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-yellow-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Enviar
                         </button>
