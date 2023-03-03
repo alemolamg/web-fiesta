@@ -3,10 +3,16 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
 import Form from '@/src/components/Form'
+import { motion, useTransform, useScroll } from "framer-motion";
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Home() {
+  const { scrollYProgress } = useScroll()
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+
   return (
     <>
       <Head>
@@ -21,15 +27,30 @@ export default function Home() {
 
         <div className='lg:mx-5'>
 
-          <div className='mx-3 my-2 px-3 py-2 text-justify'>
+          <motion.div className='mx-3 my-2 px-3 py-2 text-justify'
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+            delay: 0.4,
+            ease: [0, 0.71, 0.2, 1.01]
+            }}
+          >
             Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
             La idea es poder compartir con vosotros, mis amigos; este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
             Para más detalles podeis contactar por info@alemolamg.com y por telegram con: @AlemolAMG
-
-          </div>
+          </motion.div>
 
           {/* Tarjetas para el cumpleaños */}
-          <div className='py-3 my-2 grid sm:grid-cols-2 content-evenly '>
+          <motion.div className={`py-3 my-2 grid sm:grid-cols-2 content-evenly`}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+            delay: 0.6,
+            ease: [0, 0.71, 0.2, 1.01]
+            }}
+          >
             <Card
               titulo="Fiesta Málaga 18 de Marzo"
               description="El cumpleaños se celebra en Málaga durante el día 18."
@@ -41,33 +62,42 @@ export default function Home() {
             Se va a poner una barra libre durante 2 horas."
               className={`${styles.tarjetaLucena}`}
             ></Card>
-          </div>
+          </motion.div>
 
           {/* Formulario */}
-          <div>
+          <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.2,
+            delay: 0.8,
+            ease: [0, 0.71, 0.2, 1.01]
+            }}>
             <Form></Form>
-          </div>
+          </motion.div>
 
 
           {/* <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/favicon-Alemol.jpg"
-            alt="Next.js Logo"
-            width={180}
-            height={180}
-            priority
-          />
-          <div className={styles.thirteen}>
             <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
+              className={styles.logo}
+              src="/favicon-Alemol.jpg"
+              alt="Next.js Logo"
+              width={180}
+              height={180}
               priority
             />
-          </div>
-        </div> */}
+            <div className={styles.thirteen}>
+              <Image
+                src="/thirteen.svg"
+                alt="13"
+                width={40}
+                height={31}
+                priority
+              />
+            </div>
+          </div> */}
+
+
         </div>
       </main>
     </>
