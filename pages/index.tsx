@@ -53,7 +53,7 @@ export default function Home() {
           >
             <Card
               titulo="Fiesta Málaga 18 de Marzo"
-              description="El cumpleaños se celebra en Málaga durante el día 18."
+              description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos la noche con una parada en el bar El Colmao."
               className={`${styles.tarjetaMalaga}`}
             ></Card>
             <Card
