@@ -22,12 +22,12 @@ export default function Home() {
       </Head>
       <main className="">
         <div className='bg-blue-600 text-center'>
-          <h1 className='text-3xl py-3'>#25el25 by Alemol AMG</h1>
+          <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        <div className='lg:mx-5'>
+        <div className='lg:mx-6'>
 
-          <motion.div className='mx-3 my-2 px-3 py-2 text-justify'
+          <motion.div className='mx-5 my-2 px-3 py-2 text-justify'
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
