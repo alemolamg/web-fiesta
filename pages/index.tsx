@@ -37,8 +37,9 @@ export default function Home() {
             }}
           >
             Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
-            La idea es poder compartir con vosotros, mis amigos; este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
-            Para más detalles podeis contactar por info@alemolamg.com y por telegram con: @AlemolAMG
+            La idea es poder compartir con vosotros, mis amigos, este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
+            La semana del cumpleaños se os añadirá a un grupo para informar del estado del cumpleaños.
+            Para más detalles podeis contactar por telegram con: @AlemolAMG
           </motion.div>
 
           {/* Tarjetas para el cumpleaños */}
