@@ -56,12 +56,12 @@ const Form: FC<{}> = ({ }) => {
 
     return (
         <>
-            <h2 className="text-center uppercase text-2xl ">formulario de asistencia:</h2>
+            <h2 className="text-center uppercase text-2xl mt-2">formulario de asistencia:</h2>
             {/* <div className="mx-5 text-red-400 text-center">
                 En proceso de creación
             </div> */}
-            <div className=" p-4">
-                <form className="border-red-300 border-2 p-4 rounded-lg shadow-md" onSubmit={handleSubmit}>
+            <div className=" px-4 py-2">
+                <form className=" p-4 rounded-lg shadow-md" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2">
                         <div className="mb-4 mx-2">
                             <label htmlFor="nombre" className="block font-bold mb-2">
