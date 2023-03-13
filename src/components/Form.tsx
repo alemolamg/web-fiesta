@@ -63,7 +63,7 @@ const Form: FC<{}> = ({ }) => {
             <div className=" px-4 py-2">
                 <form className=" p-4 rounded-lg" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2">
-                        <div className="mb-4 mx-2">
+                        <div className="mb-4 mb:mx-2">
                             <label htmlFor="nombre" className="block font-bold mb-2">
                                 Nombre:
                             </label>
