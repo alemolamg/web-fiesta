@@ -54,7 +54,9 @@ export default function Home() {
           >
             <Card
               titulo="Fiesta Málaga 18 de Marzo"
-              description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos la noche con una parada en el bar El Colmao."
+              description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos por la tarde con un plan de playa sobre las 17. Allí nos tomaremos una tarta o similar como 
+              celebración del cumpleaños. Una vez terminados en la playa, sobre las 9 hasta las 11 se dejará tiempo para cambiarse y prepararse para salir por la noche. Se empezará por El Colmado, un chupito en el Alquimia 
+              y por supuesto; el correspondiente aliento de dragón cumpleañero."
               className={`${styles.tarjetaMalaga}`}
             ></Card>
             <Card
