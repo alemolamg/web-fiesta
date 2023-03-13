@@ -3,13 +3,10 @@ import React, { useState } from 'react';
 import { supabase } from "@/supabaseClient";
 
 const Form: FC<{}> = ({ }) => {
-    //const classStyle: string = "my-2 px-2 py-1 md:mx-4 md:rounded-xl lg:mx-5 " + className
-
     const [nombre, setNombre] = useState('');
     const [apellidos, setApellidos] = useState('');
     const [email, setEmail] = useState('');
     const [telefono, setTelefono] = useState('');
-    // const [localidad, setLocalidad] = useState('');
     const [localidad, setLocalidad] = useState("");
 
 
@@ -53,7 +50,7 @@ const Form: FC<{}> = ({ }) => {
 
         setTimeout(() => {
             formInfo.style.display = "none";
-          }, 2000); // Ocultar el div después de 2 segundos
+          }, 4000); // Ocultar el div después de 2 segundos
 
     };
 

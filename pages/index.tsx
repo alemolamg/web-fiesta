@@ -22,12 +22,12 @@ export default function Home() {
       </Head>
       <main className="">
         <div className='bg-blue-600 text-center'>
-          <h1 className='text-3xl py-3'>#25el25 by Alemol AMG</h1>
+          <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        <div className='lg:mx-5'>
+        <div className='lg:mx-6'>
 
-          <motion.div className='mx-3 my-2 px-3 py-2 text-justify'
+          <motion.div className='mx-5 my-2 px-3 py-2 text-justify'
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -37,8 +37,9 @@ export default function Home() {
             }}
           >
             Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
-            La idea es poder compartir con vosotros, mis amigos; este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
-            Para más detalles podeis contactar por info@alemolamg.com y por telegram con: @AlemolAMG
+            La idea es poder compartir con vosotros, mis amigos, este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
+            La semana del cumpleaños se os añadirá a un grupo para informar del estado del cumpleaños.
+            Para más detalles podeis contactar por telegram con: @AlemolAMG
           </motion.div>
 
           {/* Tarjetas para el cumpleaños */}
@@ -53,7 +54,9 @@ export default function Home() {
           >
             <Card
               titulo="Fiesta Málaga 18 de Marzo"
-              description="El cumpleaños se celebra en Málaga durante el día 18."
+              description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos por la tarde con un plan de playa sobre las 17. Allí nos tomaremos una tarta o similar como 
+              celebración del cumpleaños. Una vez terminados en la playa, sobre las 9 hasta las 11 se dejará tiempo para cambiarse y prepararse para salir por la noche. Se empezará por El Colmado, un chupito en el Alquimia 
+              y por supuesto; el correspondiente aliento de dragón cumpleañero."
               className={`${styles.tarjetaMalaga}`}
             ></Card>
             <Card
