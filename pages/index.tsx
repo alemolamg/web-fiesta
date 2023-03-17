@@ -37,8 +37,7 @@ export default function Home() {
             }}
           >
             Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
-            La idea es poder compartir con vosotros, mis amigos, este dia tan especial, el cual coincide tanto el 25 de mi edad como el 25 del dia que lo celebro.
-            La semana del cumpleaños se os añadirá a un grupo para informar del estado del cumpleaños.
+            La idea es poder compartir con vosotros este dia tan especial, el cual coincide tanto el 25 de mi nueva edad como el 25 del dia que la cumplo.
             Para más detalles podeis contactar por telegram con: @AlemolAMG
           </motion.div>
 
@@ -53,7 +52,7 @@ export default function Home() {
             }}
           >
             <Card
-              titulo="Fiesta Málaga 18 de Marzo"
+              titulo="Fiesta Málaga 18 de Marzo - Inscripción cierra hoy a las 23:00"
               description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos por la tarde con un plan de playa sobre las 17. Allí nos tomaremos una tarta o similar como 
               celebración del cumpleaños. Una vez terminados en la playa, sobre las 9 hasta las 11 se dejará tiempo para cambiarse y prepararse para salir por la noche. Se empezará por El Colmado, un chupito en el Alquimia 
               y por supuesto; el correspondiente aliento de dragón cumpleañero."
@@ -62,7 +61,7 @@ export default function Home() {
             <Card
               titulo="Fiesta Lucena 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
-            Se va a poner una barra libre durante 2 horas."
+            Empezará sobre las 18:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna."
               className={`${styles.tarjetaLucena}`}
             ></Card>
           </motion.div>
