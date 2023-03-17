@@ -95,7 +95,7 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2">
-                        <div className="mb-4 md:mx-2">
+                        <div className="mb-4 md:mx-0">
                             <label htmlFor="email" className="block font-bold mb-2">
                                 Email:
                             </label>
