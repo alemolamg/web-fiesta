@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
       <main className="">
         <div className='bg-blue-600 text-center'>
-          <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
+          <h1 className='text-4xl py-3 text-white'>#25el25 by Alemol AMG</h1>
         </div>
 
         <div className='lg:mx-6'>
@@ -31,7 +31,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 2.0,
             delay: 0.4,
             ease: [0, 0.71, 0.2, 1.01]
             }}
@@ -42,22 +42,22 @@ export default function Home() {
           </motion.div>
 
           {/* Tarjetas para el cumpleaños */}
-          <motion.div className={`py-3 my-2 grid sm:grid-cols-2 content-evenly`}
+          <motion.div className={`py-3 my-2 grid sm:grid-cols-1 content-evenly`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 2.0,
             delay: 0.6,
             ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            <Card
+            {/* <Card
               titulo="Fiesta Málaga 18 de Marzo - Inscripción cierra hoy a las 23:00"
               description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos por la tarde con un plan de playa sobre las 17. Allí nos tomaremos una tarta o similar como 
               celebración del cumpleaños. Una vez terminados en la playa, sobre las 9 hasta las 11 se dejará tiempo para cambiarse y prepararse para salir por la noche. Se empezará por El Colmado, un chupito en el Alquimia 
               y por supuesto; el correspondiente aliento de dragón cumpleañero."
               className={`${styles.tarjetaMalaga}`}
-            ></Card>
+            ></Card> */}
             <Card
               titulo="Fiesta Lucena 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
@@ -71,7 +71,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 2.0,
             delay: 0.8,
             ease: [0, 0.71, 0.2, 1.01]
             }}>

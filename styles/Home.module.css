@@ -10,6 +10,11 @@
   border-right: 0.2rem solid #607bb1;
 }
 
+.submitButton{
+  background-color: var(--tarjeta-malaga-bg);
+  background: var(--tarjeta-malaga-bg);
+}
+
 .tarjetaLucena{
   background-color: var(--tarjeta-lucena-bg);
   /* border-radius: 0.7rem; */
