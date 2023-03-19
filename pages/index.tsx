@@ -4,7 +4,6 @@ import styles from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
 import Form from '@/src/components/Form'
 import { motion, useTransform, useScroll } from "framer-motion";
-import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="">
-        <div className='bg-blue-600 text-center'>
+        <div className={`${styles.headerBar}`}>
           <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
@@ -31,7 +30,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 1.7,
             delay: 0.4,
             ease: [0, 0.71, 0.2, 1.01]
             }}
@@ -42,27 +41,27 @@ export default function Home() {
           </motion.div>
 
           {/* Tarjetas para el cumpleaños */}
-          <motion.div className={`py-3 my-2 grid sm:grid-cols-2 content-evenly`}
+          <motion.div className={`py-3 my-2 grid sm:grid-cols-1 content-evenly`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 1.7,
             delay: 0.6,
             ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            <Card
+            {/* <Card
               titulo="Fiesta Málaga 18 de Marzo - Inscripción cierra hoy a las 23:00"
               description="El cumpleaños se celebra en Málaga durante el día 18. Empezaremos por la tarde con un plan de playa sobre las 17. Allí nos tomaremos una tarta o similar como 
               celebración del cumpleaños. Una vez terminados en la playa, sobre las 9 hasta las 11 se dejará tiempo para cambiarse y prepararse para salir por la noche. Se empezará por El Colmado, un chupito en el Alquimia 
               y por supuesto; el correspondiente aliento de dragón cumpleañero."
               className={`${styles.tarjetaMalaga}`}
-            ></Card>
+            ></Card> */}
             <Card
               titulo="Fiesta Lucena 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
             Empezará sobre las 18:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna."
-              className={`${styles.tarjetaLucena}`}
+              className={`${styles.tarjetaMalaga}`}
             ></Card>
           </motion.div>
 
@@ -71,34 +70,12 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 1.7,
             delay: 0.8,
             ease: [0, 0.71, 0.2, 1.01]
             }}>
             <Form></Form>
           </motion.div>
-
-
-          {/* <div className={styles.center}>
-            <Image
-              className={styles.logo}
-              src="/favicon-Alemol.jpg"
-              alt="Next.js Logo"
-              width={180}
-              height={180}
-              priority
-            />
-            <div className={styles.thirteen}>
-              <Image
-                src="/thirteen.svg"
-                alt="13"
-                width={40}
-                height={31}
-                priority
-              />
-            </div>
-          </div> */}
-
 
         </div>
       </main>
