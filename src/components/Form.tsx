@@ -50,7 +50,7 @@ const Form: FC<{}> = ({ }) => {
 
         setTimeout(() => {
             formInfo.style.display = "none";
-          }, 4000); // Ocultar el div después de 2 segundos
+        }, 4000); // Ocultar el div después de 2 segundos
 
     };
 
@@ -62,7 +62,7 @@ const Form: FC<{}> = ({ }) => {
             </div> */}
             <div className=" px-4 py-2">
                 <form className=" p-4 rounded-lg" onSubmit={handleSubmit}>
-                    <div className="grid md:grid-cols-2">
+                    <div className="grid lg:grid-cols-2">
                         <div className="mb-4 mb:mx-2">
                             <label htmlFor="nombre" className="block font-bold mb-2">
                                 Nombre:
@@ -74,11 +74,10 @@ const Form: FC<{}> = ({ }) => {
                                 onChange={handleNombreChange}
                                 placeholder="Escribe tu nombre"
                                 className="shadow appearance-none border rounded w-full py-2 px-3 mr-2 leading-tight focus:outline-none focus:shadow-outline"
-                                // className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 required
                             />
                         </div>
-                        <div className="mb-4 md:mx-2">
+                        <div className="mb-4 lg:mx-2">
                             <label htmlFor="apellidos" className="block font-bold mb-2">
                                 Apellidos:
                             </label>
@@ -94,7 +93,7 @@ const Form: FC<{}> = ({ }) => {
                             />
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-2">
+                    <div className="grid lg:grid-cols-2">
                         <div className="mb-4 md:mx-0">
                             <label htmlFor="email" className="block font-bold mb-2">
                                 Email:
@@ -110,7 +109,7 @@ const Form: FC<{}> = ({ }) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4 md:mx-2">
+                        <div className="mb-4 lg:mx-2">
                             <label htmlFor="telefono" className="block font-bold mb-2">
                                 Teléfono:
                             </label>
@@ -127,49 +126,11 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
 
-                    <div className="mb-4 text-center">
-                        <span className="block font-bold mb-2">
-                            ¿En qué localidades estás interesado/a?
-                        </span>
-                        <label htmlFor="localidades-lucena" className="inline-flex items-center mr-4">
-                            <input
-                                type="radio"
-                                id="localidades-lucena"
-                                name="localidad"
-                                value={"lucena"}
-                                checked={localidad === "lucena"}
-                                onChange={handleLocalidadChange}
-                                className="form-checkbox h-4 w-4 text-blue-600"
-                            />
-                            <span className="ml-2">Lucena</span>
-                        </label>
-                        <label htmlFor="localidades-malaga" className="inline-flex items-center mr-4">
-                            <input
-                                type="radio"
-                                id="localidades-malaga"
-                                name="localidad"
-                                value={"malaga"}
-                                checked={localidad === "malaga"}
-                                onChange={handleLocalidadChange}
-                                className="form-checkbox h-4 w-4 text-blue-600"
-                            />
-                            <span className="ml-2">Málaga</span>
-                        </label>
-                        <label htmlFor="localidad" className="inline-flex items-center">
-                            <input
-                                type="radio"
-                                id="localidades-ambas"
-                                name="localidad"
-                                value={"ambas"}
-                                checked={localidad === "ambas"}
-                                onChange={handleLocalidadChange}
-                                className="form-checkbox h-4 w-4 text-blue-600"
-                            />
-                            <span className="ml-2 ">Ambas</span>
-                        </label>
-                    </div>
-                        <h2 id="formInfo" className="hidden my-3 py-2 text-green-600 uppercase text-2xl text-center">Formulario Enviado</h2>
-                    <div className="flex justify-center">
+                    <input type="hidden" name="localidad" value="lucena" onChange={handleLocalidadChange}/>
+
+                    <h2 id="formInfo" className="hidden my-3 py-2 text-green-600 uppercase text-2xl text-center">Formulario Enviado</h2>
+
+                    <div className="flex justify-center my-3 py-1">
                         <button
                             type="submit"
                             className="bg-yellow-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

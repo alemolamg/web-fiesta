@@ -4,7 +4,6 @@ import styles from '@/styles/Home.module.css'
 import Card from '@/src/components/Card'
 import Form from '@/src/components/Form'
 import { motion, useTransform, useScroll } from "framer-motion";
-import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,8 +20,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="">
-        <div className='bg-blue-600 text-center'>
-          <h1 className='text-4xl py-3 text-white'>#25el25 by Alemol AMG</h1>
+        <div className={`${styles.headerBar}`}>
+          <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
         <div className='lg:mx-6'>
@@ -31,7 +30,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 2.0,
+            duration: 1.7,
             delay: 0.4,
             ease: [0, 0.71, 0.2, 1.01]
             }}
@@ -46,7 +45,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 2.0,
+            duration: 1.7,
             delay: 0.6,
             ease: [0, 0.71, 0.2, 1.01]
             }}
@@ -62,7 +61,7 @@ export default function Home() {
               titulo="Fiesta Lucena 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
             Empezará sobre las 18:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna."
-              className={`${styles.tarjetaLucena}`}
+              className={`${styles.tarjetaMalaga}`}
             ></Card>
           </motion.div>
 
@@ -71,34 +70,12 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 2.0,
+            duration: 1.7,
             delay: 0.8,
             ease: [0, 0.71, 0.2, 1.01]
             }}>
             <Form></Form>
           </motion.div>
-
-
-          {/* <div className={styles.center}>
-            <Image
-              className={styles.logo}
-              src="/favicon-Alemol.jpg"
-              alt="Next.js Logo"
-              width={180}
-              height={180}
-              priority
-            />
-            <div className={styles.thirteen}>
-              <Image
-                src="/thirteen.svg"
-                alt="13"
-                width={40}
-                height={31}
-                priority
-              />
-            </div>
-          </div> */}
-
 
         </div>
       </main>
