@@ -13,7 +13,7 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
   console.log(`
-  ###    ##       ######## ##     ##  #######  ##       
+   ###    ##       ######## ##     ##  #######  ##       
   ## ##   ##       ##       ###   ### ##     ## ##       
  ##   ##  ##       ##       #### #### ##     ## ##       
 ##     ## ##       ######   ## ### ## ##     ## ##       
