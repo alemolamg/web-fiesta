@@ -50,7 +50,7 @@ const Form: FC<{}> = ({ }) => {
 
         setTimeout(() => {
             formInfo.style.display = "none";
-        }, 4000); // Ocultar el div después de 2 segundos
+        }, 4500); // Ocultar el div después de 2 segundos
 
     };
 
@@ -133,7 +133,7 @@ const Form: FC<{}> = ({ }) => {
                     <div className="flex justify-center my-3 py-1">
                         <button
                             type="submit"
-                            className="bg-yellow-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Enviar
                         </button>

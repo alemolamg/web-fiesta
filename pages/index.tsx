@@ -12,6 +12,14 @@ export default function Home() {
   const { scrollYProgress } = useScroll()
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
+  console.log(' / \-----------------'+ 
+  ' \_,|                | '+
+  '    |    AlemolAMG   | '+
+  '    |  ,---------------'+
+    '    \_/______________/ ')
+  
+  
+
   return (
     <>
       <Head>
@@ -24,7 +32,7 @@ export default function Home() {
           <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        <div className='lg:mx-6'>
+        <div className='md:mx-5 lg:mx-9'>
 
           <motion.div className='mx-5 my-2 px-3 py-2 text-justify'
           initial={{ opacity: 0, scale: 0.5 }}
