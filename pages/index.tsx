@@ -12,6 +12,17 @@ export default function Home() {
   const { scrollYProgress } = useScroll()
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
+  console.log(`
+   ###    ##       ######## ##     ##  #######  ##       
+  ## ##   ##       ##       ###   ### ##     ## ##       
+ ##   ##  ##       ##       #### #### ##     ## ##       
+##     ## ##       ######   ## ### ## ##     ## ##       
+######### ##       ##       ##     ## ##     ## ##       
+##     ## ##       ##       ##     ## ##     ## ##       
+##     ## ######## ######## ##     ##  #######  ########
+
+`)
+  
   return (
     <>
       <Head>
@@ -24,7 +35,7 @@ export default function Home() {
           <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        <div className='lg:mx-6'>
+        <div className='md:mx-5 lg:mx-9'>
 
           <motion.div className='mx-5 my-2 px-3 py-2 text-justify'
           initial={{ opacity: 0, scale: 0.5 }}
@@ -35,7 +46,7 @@ export default function Home() {
             ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Lucena y otra en Málaga.
+            Por mi cumpleaños voy a celebrar una fiesta de cumpleaños en Málaga y en Lucena.
             La idea es poder compartir con vosotros este dia tan especial, el cual coincide tanto el 25 de mi nueva edad como el 25 del dia que la cumplo.
             Para más detalles podeis contactar por telegram con: @AlemolAMG
           </motion.div>
@@ -58,7 +69,7 @@ export default function Home() {
               className={`${styles.tarjetaMalaga}`}
             ></Card> */}
             <Card
-              titulo="Fiesta Lucena 25 de Marzo"
+              titulo="Fiesta Lucena - 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
             Empezará sobre las 18:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna."
               className={`${styles.tarjetaMalaga}`}

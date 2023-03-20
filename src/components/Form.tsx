@@ -11,7 +11,8 @@ const Form: FC<{}> = ({ }) => {
 
 
     const handleLocalidadChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setLocalidad(event.target.value);
+        // setLocalidad(event.target.value)
+        "lucena";
     };
 
 
@@ -39,10 +40,10 @@ const Form: FC<{}> = ({ }) => {
            Apellidos: ${apellidos}
            Email: ${email}
            Teléfono: ${telefono}
-           Localidad: ${localidad}
+           Localidad: Lucena
          `);
         await supabase.from("personas").insert({
-            nombre, apellidos, email, telefono, lugar: localidad
+            nombre, apellidos, email, telefono, lugar: "lucena"
         })
 
         var formInfo = document.getElementById("formInfo") as HTMLDivElement;
@@ -50,7 +51,7 @@ const Form: FC<{}> = ({ }) => {
 
         setTimeout(() => {
             formInfo.style.display = "none";
-        }, 4000); // Ocultar el div después de 2 segundos
+        }, 4500); // Ocultar el div después de 2 segundos
 
     };
 
@@ -126,14 +127,12 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
 
-                    <input type="hidden" name="localidad" value="lucena" onChange={handleLocalidadChange}/>
-
                     <h2 id="formInfo" className="hidden my-3 py-2 text-green-600 uppercase text-2xl text-center">Formulario Enviado</h2>
 
                     <div className="flex justify-center my-3 py-1">
                         <button
                             type="submit"
-                            className="bg-yellow-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Enviar
                         </button>
