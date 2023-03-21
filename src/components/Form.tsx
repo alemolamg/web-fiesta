@@ -54,7 +54,7 @@ const Form: FC<{}> = ({ }) => {
             {/* <div className="px-4 bg-emerald-500"> */}
                 <form className="px-5" onSubmit={handleSubmit}>
                     <div className="grid lg:grid-cols-2">
-                        <div className="mb-4 mb:mx-2 pr-1">
+                        <div className="mb-4 mb:mx-2 px-1">
                             <label htmlFor="nombre" className="block font-bold mb-2">
                                 Nombre:
                             </label>
@@ -68,7 +68,7 @@ const Form: FC<{}> = ({ }) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4 lg:mx-2 pl-1">
+                        <div className="mb-4 lg:mx-2 px-1">
                             <label htmlFor="apellidos" className="block font-bold mb-2">
                                 Apellidos:
                             </label>
@@ -85,7 +85,7 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
                     <div className="grid lg:grid-cols-2">
-                        <div className="mb-4 md:mx-0 pr-1">
+                        <div className="mb-4 md:mx-0 px-1">
                             <label htmlFor="email" className="block font-bold mb-2">
                                 Email:
                             </label>
@@ -100,7 +100,7 @@ const Form: FC<{}> = ({ }) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4 lg:mx-2 pl-1">
+                        <div className="mb-4 lg:mx-2 px-1">
                             <label htmlFor="telefono" className="block font-bold mb-2">
                                 Teléfono:
                             </label>
