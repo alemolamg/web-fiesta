@@ -83,7 +83,7 @@ export default function Home() {
           </motion.div>
 
           {/* Añadimos un mapa */}
-          <motion.div
+          {/* <motion.div
             className='mb-5 pb-2 flex justify-center'
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -94,7 +94,7 @@ export default function Home() {
               }}>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.0348890529026!2d-4.474678449190985!3d37.41265024058493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d779ed1f8d4a7%3A0x8b6b860e5a8703b!2sConstrucciones%20y%20Contratas%20Cabello%20S.L.!5e0!3m2!1ses!2ses!4v1679345038284!5m2!1ses!2ses"
               width="500rem lg:800rem" height="200" style={{ border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='content-center'></iframe>
-            </motion.div>
+            </motion.div> */}
 
         </div>
       </main>
