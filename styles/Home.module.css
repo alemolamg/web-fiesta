@@ -10,7 +10,36 @@
   border-right: 0.2rem solid #607bb1;
 }
 
-.tarjetaLucena{
+.vistaIndex {
+  /* background-color: #a55610; */
+  padding-left: 10%;
+  padding-right: 10%;
+  /* background-color: green; */
+
+}
+
+@media screen and (max-width:768px) {   /* Vista para Movil  */
+  .vistaIndex{
+  padding-left: 0%;
+  padding-right: 0%;
+  /* background-color: rebeccapurple; */
+  }
+}
+
+@media screen and (min-width:1015px) {
+  .vistaIndex{
+  padding-left: 15%;
+  padding-right: 15%;
+  /* background-color: burlywood; */
+  }
+}
+
+.submitButton {
+  background-color: var(--tarjeta-malaga-bg);
+  background: var(--tarjeta-malaga-bg);
+}
+
+.tarjetaLucena {
   background-color: var(--tarjeta-lucena-bg);
   /* border-radius: 0.7rem; */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -22,11 +51,22 @@
   border-right: 0.2rem solid #79a83a;
 }
 
+.headerBar {
+  background-color: var(--tarjeta-malaga-bg);
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
 .tarjeta-img {
   display: block;
   width: 100%;
   height: auto;
-  filter: blur(5px); /* Añade el efecto blur */
+  filter: blur(5px);
+  /* Añade el efecto blur */
 }
 
 .tarjeta-content {
@@ -203,11 +243,9 @@
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
+  background: linear-gradient(to bottom right,
+      rgba(var(--tile-start-rgb), 1),
+      rgba(var(--tile-end-rgb), 1));
   background-clip: content-box;
 }
 
@@ -286,11 +324,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -301,11 +337,9 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
@@ -332,6 +366,7 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
