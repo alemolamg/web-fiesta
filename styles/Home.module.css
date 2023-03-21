@@ -10,6 +10,30 @@
   border-right: 0.2rem solid #607bb1;
 }
 
+.vistaIndex {
+  /* background-color: #a55610; */
+  padding-left: 10%;
+  padding-right: 10%;
+  /* background-color: green; */
+
+}
+
+@media screen and (max-width:768px) {   /* Vista para Movil  */
+  .vistaIndex{
+  padding-left: 0%;
+  padding-right: 0%;
+  /* background-color: rebeccapurple; */
+  }
+}
+
+@media screen and (min-width:1015px) {
+  .vistaIndex{
+  padding-left: 15%;
+  padding-right: 15%;
+  /* background-color: burlywood; */
+  }
+}
+
 .submitButton {
   background-color: var(--tarjeta-malaga-bg);
   background: var(--tarjeta-malaga-bg);

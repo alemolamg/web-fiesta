@@ -5,7 +5,7 @@ const Card: FC<{ titulo: string, description: string, className: string, style?:
     return (
         <div className={classStyle} style={style}>
             <h1 className="text-xl text-center">{titulo}</h1>
-            <div className="text-justify px-2">
+            <div className="text-justify px-2 py-2">
                 {description}
             </div>
         </div>

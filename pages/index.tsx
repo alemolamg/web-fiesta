@@ -31,10 +31,10 @@ export default function Home() {
       </Head>
       <main className="">
         <div className={`${styles.headerBar}`}>
-          <h1 className='text-4xl py-3'>#25el25 by Alemol AMG</h1>
+          <h1 className='text-3xl md:text-5xl py-3'>#25el25 by Alemol AMG</h1>
         </div>
 
-        <div className='md:mx-5 lg:mx-9'>
+        <div className={`${styles.vistaIndex} `}>  {/* md:mx-12 lg:mx-24 */}
 
           <motion.div className='mx-5 my-2 px-3 py-2 text-justify'
             initial={{ opacity: 0, scale: 0.5 }}
@@ -92,7 +92,7 @@ export default function Home() {
               ease: [0, 0.71, 0.2, 1.01]
               }}>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.0348890529026!2d-4.474678449190985!3d37.41265024058493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d779ed1f8d4a7%3A0x8b6b860e5a8703b!2sConstrucciones%20y%20Contratas%20Cabello%20S.L.!5e0!3m2!1ses!2ses!4v1679345038284!5m2!1ses!2ses"
-              width="90%" height="200px" style={{ border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='content-center'></iframe>
+              width="90%" height="200px" style={{ border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='content-center pt-3'></iframe>
             </motion.div>
 
         </div>

@@ -7,14 +7,13 @@ const Form: FC<{}> = ({ }) => {
     const [apellidos, setApellidos] = useState('');
     const [email, setEmail] = useState('');
     const [telefono, setTelefono] = useState('');
-    const [localidad, setLocalidad] = useState("");
+    // const [localidad, setLocalidad] = useState("");
 
 
     const handleLocalidadChange = (event: ChangeEvent<HTMLInputElement>) => {
         // setLocalidad(event.target.value)
-        "lucena";
+        "lucena";   //Hardcore Value
     };
-
 
     const handleNombreChange = (event: ChangeEvent<HTMLInputElement>) => {
         setNombre(event.target.value);
@@ -35,13 +34,6 @@ const Form: FC<{}> = ({ }) => {
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
         event.preventDefault();
-        console.log(`
-           Nombre: ${nombre}
-           Apellidos: ${apellidos}
-           Email: ${email}
-           Teléfono: ${telefono}
-           Localidad: Lucena
-         `);
         await supabase.from("personas").insert({
             nombre, apellidos, email, telefono, lugar: "lucena"
         })
@@ -57,14 +49,12 @@ const Form: FC<{}> = ({ }) => {
 
     return (
         <>
-            <h2 className="text-center uppercase text-2xl mt-2">formulario de asistencia:</h2>
-            {/* <div className="mx-5 text-red-400 text-center">
-                En proceso de creación
-            </div> */}
-            <div className=" px-4 py-2">
-                <form className=" p-4 rounded-lg" onSubmit={handleSubmit}>
+            <h2 className="text-center uppercase text-xl my-2">formulario de asistencia:</h2>
+
+            {/* <div className="px-4 bg-emerald-500"> */}
+                <form className="px-5" onSubmit={handleSubmit}>
                     <div className="grid lg:grid-cols-2">
-                        <div className="mb-4 mb:mx-2">
+                        <div className="mb-4 mb:mx-2 pr-1">
                             <label htmlFor="nombre" className="block font-bold mb-2">
                                 Nombre:
                             </label>
@@ -78,7 +68,7 @@ const Form: FC<{}> = ({ }) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4 lg:mx-2">
+                        <div className="mb-4 lg:mx-2 pl-1">
                             <label htmlFor="apellidos" className="block font-bold mb-2">
                                 Apellidos:
                             </label>
@@ -95,7 +85,7 @@ const Form: FC<{}> = ({ }) => {
                         </div>
                     </div>
                     <div className="grid lg:grid-cols-2">
-                        <div className="mb-4 md:mx-0">
+                        <div className="mb-4 md:mx-0 pr-1">
                             <label htmlFor="email" className="block font-bold mb-2">
                                 Email:
                             </label>
@@ -110,7 +100,7 @@ const Form: FC<{}> = ({ }) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4 lg:mx-2">
+                        <div className="mb-4 lg:mx-2 pl-1">
                             <label htmlFor="telefono" className="block font-bold mb-2">
                                 Teléfono:
                             </label>
@@ -129,7 +119,7 @@ const Form: FC<{}> = ({ }) => {
 
                     <h2 id="formInfo" className="hidden my-3 py-2 text-green-600 uppercase text-2xl text-center">Formulario Enviado</h2>
 
-                    <div className="flex justify-center my-3 py-1">
+                    <div className="flex justify-center py-2">
                         <button
                             type="submit"
                             className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -138,8 +128,6 @@ const Form: FC<{}> = ({ }) => {
                         </button>
                     </div>
                 </form>
-
-            </div>
         </>
     )
 }
