@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="es">
       <Head />
-      <body>
+      <body> {/*style={{backgroundColor:"var(--tarjeta-malaga-bg)"}} */}
         <Main />
         <NextScript />
       </body>
