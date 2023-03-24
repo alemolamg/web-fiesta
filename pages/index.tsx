@@ -63,7 +63,8 @@ export default function Home() {
             <Card
               titulo="Fiesta Lucena - 25 de Marzo"
               description="Preparate para la fiesta el día 25 de marzo. Habrá un local donde reunirnos, beber, comer, bailar y ¡saltar!
-            Empezará sobre las 18:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna.
+            Empezará sobre las 17:00 con una merienda mas celebración; la cual se alargará hasta la noche, donde emperazá la marcha nocturna.
+            La entrada cuesta 5€ donde se incluye todo lo realizado en el local, tanto la merienda como la barra libre.
             Ubicación del local: Ctra. de Rute, 13, 14900 Lucena, Córdoba."
               className={`${styles.tarjetaMalaga}`}
             ></Card>
