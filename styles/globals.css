@@ -44,7 +44,7 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --tarjeta-malaga-bg: #769ee8;
+  --primary-color: #030c40;
   --tarjeta-lucena-bg: #a2ca82;
 }
 
@@ -78,9 +78,6 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
-
-    --tarjeta-malaga-bg: #3e547f;
-    --tarjeta-lucena-bg: #464f2c;
   }
 }
 
