@@ -52,13 +52,14 @@
 }
 
 .headerBar {
-  background-color: var(--tarjeta-malaga-bg);
+  background-color: var(--primary-color);
   align-content: center;
   justify-content: center;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 0.5rem;
   overflow: hidden;
+  color: #fff;
 }
 
 .tarjeta-img {
